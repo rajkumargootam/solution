@@ -13,7 +13,15 @@
         templateUrl: 'app/main/main.html',
         controller: 'AppCtrl',
         controllerAs: 'app'
+      })
+
+      .state('dashboard', {
+        url: '/',
+        templateUrl: 'app/main/main.html',
+        controller: 'LeftCtrl',
+        controllerAs: 'left'
       });
+
 
     $urlRouterProvider.otherwise('/');
   }
