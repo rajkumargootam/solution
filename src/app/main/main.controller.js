@@ -8,6 +8,10 @@
       })
 
       .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+        $scope.dashboard = function(){
+          console.log("hi");
+
+        }
 
       });
 

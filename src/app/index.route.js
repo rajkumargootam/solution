@@ -5,25 +5,25 @@
     .module('solution')
     .config(routerConfig);
 
-  /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'AppCtrl',
-        controllerAs: 'app'
-      })
+    /** @ngInject */
+    function routerConfig($stateProvider, $urlRouterProvider) {
+      $stateProvider
+        .state('home', {
+          url: '/home',
+          templateUrl: 'app/main/main.html',
+          controller: 'AppCtrl',
+          controllerAs: 'app'
+        })
 
-      .state('dashboard', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'LeftCtrl',
-        controllerAs: 'left'
-      });
+        .state('dashboard', {
+          url: '/dashboard',
+          templateUrl: 'app/main/dashboard.html',
+          controller: 'LeftCtrl',
+          controllerAs: 'dash'
+        });
 
 
-    $urlRouterProvider.otherwise('/');
-  }
+      $urlRouterProvider.otherwise('/home');
+    }
 
-})();
+  })();
